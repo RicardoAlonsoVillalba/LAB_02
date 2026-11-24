@@ -1,0 +1,78 @@
+[
+  {
+    "op": "query",
+    "ns": "comercial.clientes",
+    "command": {
+      "find": "clientes",
+      "filter": {
+        "ciudad": "Culiacán"
+      },
+      "projection": {
+        "nombre": 1,
+        "ciudad": 1
+      },
+      "lsid": {
+        "id": {
+          "$binary": {
+            "base64": "7/JWOlciSmm60ue4pcWyoQ==",
+            "subType": "04"
+          }
+        }
+      },
+      "$db": "comercial"
+    },
+    "docsExamined": 5,
+    "nreturned": 3,
+    "millis": 0,
+    "ts": {
+      "$date": "2026-11-24T01:26:28.070Z"
+    },
+    "client": "127.0.0.1",
+    "appName": "app-ventas-web",
+    "user": "app_ventas@comercial"
+  },
+  {
+    "op": "update",
+    "ns": "comercial.clientes",
+    "command": {
+      "q": {
+        "_id": 3
+      },
+      "u": {
+        "$set": {
+          "rfc": "GAMA780912XYZ"
+        }
+      },
+      "multi": false,
+      "upsert": false
+    },
+    "docsExamined": 1,
+    "nModified": 1,
+    "millis": 0,
+    "ts": {
+      "$date": "2026-11-24T01:26:28.073Z"
+    },
+    "client": "127.0.0.1",
+    "appName": "app-ventas-web",
+    "user": "app_ventas@comercial"
+  },
+  {
+    "op": "remove",
+    "ns": "comercial.clientes",
+    "command": {
+      "q": {
+        "_id": 2
+      },
+      "limit": 1
+    },
+    "docsExamined": 1,
+    "ndeleted": 1,
+    "millis": 0,
+    "ts": {
+      "$date": "2026-11-24T01:26:28.076Z"
+    },
+    "client": "127.0.0.1",
+    "appName": "app-ventas-web",
+    "user": "app_ventas@comercial"
+  }
+]
